@@ -1,1 +1,10 @@
-dwadwa
+<?php
+$ly_title=$_POST["ly_title"];
+$ly_content=$_POST["ly_content"];
+$ly_time=$_POST["ly_time"];
+$ly_author=$_POST["ly_author"];
+$ly_email=$_POST["ly_email"];
+$sql="update liuyan set ly_title='$ly_title',ly_content='$ly_content',ly_time='$ly_time',ly_author='$ly_author',ly_email='$ly_email' where ly_id=$_GET[id]";
+mysql_query($sql,$connec);
+echo("<script type='text/javascript'> alert('更新成功！');location.href='../index.php';</script>");
+?>
